@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final JS</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="ionicons.designerpack">
 </head>
 <body>
     <div class="cabecero">
@@ -28,6 +29,27 @@
             </div>
         </div>
     </div>
+    <form action="" id="forma">
+        <div class="agregar">
+            <div class="agregar_contenedor">
+                <select name="agregar_tipo" class="agregar_tipo" id="tipo">
+                    <option value="ingreso" selected>+</option>
+                    <option value="egreso" >-</option>
+                </select>
+                <input type="text" id="descripcion" class="agregar_descripcion" placeholder="Agregar Descripción">
+                <input type="number" class="agregar_valor" placeholder="valor" step="any">
+                <button class="agregar_btn" name="checkmark-circle-outline">but</button>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+
+
+            </div>
+
+        </div>
     
+
+    </form>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
