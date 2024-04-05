@@ -3,10 +3,10 @@ let cargarCabecero = () => {
     let presupuesto = totalIngresos() - totalEgresos();
     let porcentajeEgreso = totalEgresos() / totalIngresos();  
     
-    console.log(presupuesto);
+    console.log(formatoMoneda(presupuesto));
     console.log(porcentajeEgreso);
-    console.log(totalIngresos());
-    console.log(totalEgresos());    
+    console.log(formatoMoneda(totalIngresos()));
+    console.log(formatoMoneda(totalEgresos()));    
 };
 
 let totalIngresos = () => { 
@@ -28,6 +28,14 @@ let totalEgresos = () => {
 let egresos = [900, 400];
 let ingresos = [9000, 400];
 
+let formatoMoneda = (moneda) => { 
+    let moneda2 = moneda.toLocaleString("es-MX",{style:"currency", currency:"MXN"});
+    return moneda2;
+}
 
+let formatoPorcentaje = (porcen) => { 
+    let porcen2 = porcen.toLocaleString("es-MX",{style:"percent"});
+    return porcen2;
+}
 
 
