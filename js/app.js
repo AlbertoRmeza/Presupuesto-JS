@@ -4,7 +4,7 @@ let cargarCabecero = () => {
     let porcentajeEgreso = totalEgresos() / totalIngresos();  
     
     console.log(formatoMoneda(presupuesto));
-    console.log(porcentajeEgreso);
+    console.log(formatoPorcentaje(porcentajeEgreso));
     console.log(formatoMoneda(totalIngresos()));
     console.log(formatoMoneda(totalEgresos()));    
 };
@@ -34,7 +34,7 @@ let formatoMoneda = (moneda) => {
 }
 
 let formatoPorcentaje = (porcen) => { 
-    let porcen2 = porcen.toLocaleString("es-MX",{style:"percent"});
+    let porcen2 = porcen.toLocaleString("es-MX",{style:"percent", minimumFractionDigits:4});
     return porcen2;
 }
 
