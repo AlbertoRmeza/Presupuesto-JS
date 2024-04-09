@@ -34,7 +34,7 @@ let formatoMoneda = (moneda) => {
 }
 
 let formatoPorcentaje = (porcen) => { 
-    let porcen2 = porcen.toLocaleString("es-MX",{style:"percent", minimumFractionDigits:4});
+    let porcen2 = porcen.toLocaleString("es-MX",{style:"percent", minimumFractionDigits:2});
     return porcen2;
 }
 
